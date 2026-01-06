@@ -2,6 +2,9 @@
 
 using namespace std;
 
+template <typename T>
+void mySwap(T &, T &);
+
 int main(){
 	int x, y;
 	string a, b;
@@ -28,5 +31,12 @@ int main(){
 	cout << "p = " << p << ", q = " << q << "\n";
 
 	return 0;
+}
+
+template <typename T>
+void mySwap(T &v1, T &v2) {
+    T temp = v1;
+    v1 = v2;
+    v2 = temp;
 }
 
